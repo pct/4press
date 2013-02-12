@@ -1,0 +1,9 @@
+{
+  "name": "[Blog name]",
+  "description": "[Blog description]",
+  "keywords": "[Blog keyowrds]",
+  "author": "[Your name]",
+  "email": "[Blog email]",
+  "siteUrl": "http://nodejs.in",
+  "favicon": "https://github.com//favicon.ico"
+}
