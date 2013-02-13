@@ -1,6 +1,6 @@
 {
   "name": "4press",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "description": "A simple static blog framework, powered by Node.js.",
   "preferGlobal": true,
   "main": "./lib/command.js",
@@ -13,16 +13,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zmmbreeze/4press.git"
+    "url": "https://github.com/pct/4press.git"
   },
   "bugs": {
-    "url": "https://github.com/zmmbreeze/4press/issues"
+    "url": "https://github.com/pct/4press/issues"
   },
-  "keywords": ["website", "blog", "framework", "static", "4press"],
-  "author": "MZhou <zmmbreeze0825@gmail.com> (http://mzhou.me)",
+  "keywords": ["website", "blog", "framework", "static", "4press", "rss"],
+  "author": "Daniel Lin <linpct@gmail.com>",
   "license": {
     "type": "MIT",
-    "url": "https://raw.github.com/zmmbreeze/4press/master/MIT-LICENTSE.txt"
+    "url": "https://raw.github.com/pct/4press/master/LICENSE"
   },
   "dependencies": {
     "cli-color": "0.2.x",
@@ -30,7 +30,8 @@
     "jade": "0.27.x",
     "marked": "0.2.x",
     "moment": "1.7.x",
-    "rss": "0.0.x"
+    "rss": "0.0.x",
+    "mocha": "1.8.x"
   },
   "engines": {
     "node": ">=0.8"

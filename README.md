@@ -1,17 +1,18 @@
 #4press 
 
-4press is a blog engine clone and modified from [blogin](https://github.com/zmmbreeze/blogin). 
+4press is a blog engine clone and modified from [blogin](https://github.com/zmmbreeze/blogin).
+
+### Could not use on current stage
 
 ###Features
 
-
+* node.js
 * markdown
 * static site
 * rss support
 
 ###Install
-Sorry but cannot install on current stage!
-
+...
 
 ###Config
 config.json

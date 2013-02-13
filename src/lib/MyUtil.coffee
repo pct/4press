@@ -71,20 +71,20 @@ exports.updateInfos = () ->
 		return false
 
 	# rewrite info file
-	infos = {};
-	infos.post = [];
+	infos = {}
+	infos.post = []
 	posts = file.dir(fileApi.getSrcFile('post'))
 	posts.forEach (filePath) =>
-		post = {};
+		post = {}
 		post.file = path.relative(projectDir, filePath)
 		post.ctime = file.getCTime(filePath)
 		post.mtime = file.getMTime(filePath)
 		infos.post.push(post)
 
-	infos.page = [];
+	infos.page = []
 	pages = file.dir(fileApi.getSrcFile('page'))
 	pages.forEach (filePath) =>
-		page = {};
+		page = {}
 		page.file = path.relative(projectDir, filePath)
 		page.ctime = file.getCTime(filePath)
 		page.mtime = file.getMTime(filePath)
@@ -107,10 +107,10 @@ exports.spawn = (options) ->
 	comm.stderr.setEncoding('utf8')
 
 	comm.stdout.on 'data', options.stdout or (data) ->
-		util.puts(data);
+		util.puts(data)
 
 	comm.stderr.on 'data', options.stderr or (data) ->
-		util.puts(data);
+		util.puts(data)
 
 	if options.exit
 		comm.on('exit', options.exit)

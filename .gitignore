@@ -1,3 +1,5 @@
 node_modules
 *~
 *.swp
+bin/4press
+lib/*.js

@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 args = process.argv.slice(2)
 command_name = args.shift()
 commands = require("../lib/command")
