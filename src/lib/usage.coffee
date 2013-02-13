@@ -4,7 +4,7 @@ clc  = require('cli-color')
 commandsDesc =
 	deploy: 'Deploy static files to git server, like github.'
 	server: 'Start a server on http://localhost:3000 .'
-	update: 'Generate the static files.'
+	build: 'Generate the static files.'
 	post: 'Create post.'
 	page: 'Create page.'
 	new: 'Init the blog directory.'
@@ -13,7 +13,7 @@ commandsDesc =
 commandsUsage =
 	deploy: ''
 	server: 'Start a server on http://localhost:3000 .'
-	update:
+	build:
 		'''
 		[-q] [blog directory]
 

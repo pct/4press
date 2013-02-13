@@ -12,8 +12,8 @@ module.exports =
 		#util.puts('This methods was not implemented')
 	server: (args) ->
 		require('./server.js')
-	update: (args) ->
-		require('./update.js')(args)
+	build: (args) ->
+		require('./build.js')(args)
 	post: (args) ->
 		require('./post.js')(args)
 	page: (args) ->

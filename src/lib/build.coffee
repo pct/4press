@@ -287,12 +287,12 @@ module.exports = (args) ->
 	arg = parseArg(args)
 	projectDir = path.resolve(process.cwd(), arg.req[0] || './')
 	if not MyUtil.checkProjectDir(projectDir)
-		usage.puts('update')
+		usage.puts('build')
 		return
 	templateDir = path.resolve(projectDir, './public/template/')
 
 	if not file.exists(templateDir)
-		usage.puts('update')
+		usage.puts('build')
 		return
 	# rend html
 	keepQuiet = arg.opt.indexOf('q') > 0
