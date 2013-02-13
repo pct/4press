@@ -12,7 +12,7 @@ module.exports = (args) ->
 	arg = parseArg(args)
 	projectDir = path.resolve(process.cwd(), arg.req[0] || './')
 
-	if file.copy(path.resolve(__dirname, '../prototype/'), projectDir)
+	if file.copy(path.resolve(__dirname, '../template/'), projectDir)
 		util.puts('Blog created at "' + projectDir + '".')
 	else
 		util.puts('Directory "' + projectDir + '" existed!')
@@ -21,7 +21,7 @@ module.exports = (args) ->
 		process.stdin.setEncoding('utf8')
 
 		yesCallback = () ->
-			file.copy(path.resolve(__dirname, '../prototype/'), projectDir, true)
+			file.copy(path.resolve(__dirname, '../template/'), projectDir, true)
 			util.puts('Blog created at "' + projectDir + '".')
 			util.puts('Init complete.')
 			process.exit()
