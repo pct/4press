@@ -37,8 +37,13 @@ config.json
 #Contribute
 
 ###Develop environment
-* node js
+* node.js
+
+##### node modules
+
 * coffee-script
+* mocha
+* chai
 
 ###Commands
 

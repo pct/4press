@@ -58,7 +58,7 @@ fileApi =
 		projectInfo = projectInfo || MyUtil.getInfos(projectDir)
 		list = projectInfo[type]
 		filePath = path.relative(projectDir, filePath)
-		result = null;
+		result = null
 		list.forEach (item) =>
 			if (item.file is filePath)
 				result = item
@@ -91,7 +91,7 @@ dataApi =
 		fileList = fileApi.sortByCreateTime('post', fileList)
 		fileList.forEach (filePath) =>
 			if not file.isMd(filePath)
-				return;
+				return
 			items.push
 				title: file.pathToTitle(filePath)
 				url: fileApi.srcToUrl('post', filePath)
@@ -106,7 +106,7 @@ dataApi =
 		fileList = fileApi.sortByCreateTime('page', fileList)
 		fileList.forEach (filePath) =>
 			if not file.isMd(filePath)
-				return;
+				return
 			items.push
 				title: file.pathToTitle(filePath)
 				url: fileApi.srcToUrl('page', filePath)
@@ -122,7 +122,7 @@ dataApi =
 			return a < b
 		archiveList.forEach (filePath) =>
 			if file.isHide(filePath)
-				return;
+				return
 			items.push
 				title: file.getFileName(filePath)
 				url: fileApi.srcToUrl('archive', filePath) + '/'
@@ -136,7 +136,7 @@ dataApi =
 		fileList = fileApi.sortByCreateTime('post', fileList)
 		fileList.forEach (filePath) =>
 			if not file.isMd(filePath)
-				return;
+				return
 			items.push
 				title: file.pathToTitle(filePath)
 				url: fileApi.srcToUrl('post', filePath)
@@ -145,7 +145,7 @@ dataApi =
 
 	getLocals: (type, arg1) ->
 		locals =
-			site: file.readJSON(path.resolve(projectDir, './4press.json'))
+			site: file.readJSON(path.resolve(projectDir, './config.json'))
 			pageName: ''
 		siteUrl = locals.site.siteUrl
 		rssPath = if (siteUrl[siteUrl.length-1] == '/') then 'rss.xml' else '/rss.xml'
@@ -208,7 +208,7 @@ rendApi =
 
 		archives.forEach (archivePath) =>
 			if file.isHide(archivePath)
-				return;
+				return
 			archiveName = file.getFileName(archivePath)
 			archiveDestFile = path.resolve(destDir, archiveName, 'index.html')
 			file.write(archiveDestFile, compile(dataApi.getLocals('archive', archiveName)))

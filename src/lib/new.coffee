@@ -17,8 +17,8 @@ module.exports = (args) ->
 	else
 		util.puts('Directory "' + projectDir + '" existed!')
 		util.puts('Still create blog? (Y/N)')
-		process.stdin.resume();
-		process.stdin.setEncoding('utf8');
+		process.stdin.resume()
+		process.stdin.setEncoding('utf8')
 
 		yesCallback = () ->
 			file.copy(path.resolve(__dirname, '../prototype/'), projectDir, true)
@@ -36,7 +36,7 @@ module.exports = (args) ->
 		process.stdin.on 'data', (chunk) =>
 			if chunk[chunk.length - 1] isnt '\n'
 				callback()
-				return 
+				return
 			switch chunk.slice(0, -1)
 				when 'Y'
 					yesCallback()

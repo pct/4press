@@ -7,20 +7,20 @@ commandsDesc =
 	update: 'Generate the static files.'
 	post: 'Create post.'
 	page: 'Create page.'
-	init: 'Init the blog directory.'
+	new: 'Init the blog directory.'
 	help: 'Display help.'
 #command usage
 commandsUsage =
 	deploy: ''
 	server: 'Start a server on http://localhost:3000 .'
-	update: 
+	update:
 		'''
 		[-q] [blog directory]
 
 		[-q]                 Use quiet mod, do not print log.
 		[blog directory]     If not set directory then use current directory.
 		'''
-	post: 
+	post:
 		'''
 		[-f] <postname>
 
@@ -33,7 +33,7 @@ commandsUsage =
 
 		-f     Force to rewrite exist file.
 		'''
-	init:
+	new:
 		'''
 		[blog directory]
 
@@ -59,7 +59,7 @@ module.exports =
 		for command of commandsDesc
 			if command.length > maxLength
 				maxLength = command.length
-		maxLength += 5; # add space
+		maxLength += 5 # add space
 		# output commands description
 		for command, description of commandsDesc
 			util.print('   ' + clc.yellow(command) + createSpace(command, maxLength))

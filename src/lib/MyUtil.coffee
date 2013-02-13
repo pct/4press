@@ -5,11 +5,11 @@ file = require('./file')
 
 checkProjectDir = exports.checkProjectDir = (dirPath) ->
 	dirPath = path.resolve(process.cwd(), dirPath || './')
-	ConfigFile = path.relative(dirPath, './4press.json')
+	ConfigFile = path.relative(dirPath, './config.json')
 	if (file.exists(ConfigFile))
 		return true
 	else
-		util.puts('Error: ' + dirPath + ' was not the project directory, file 4press.json was not found!\n')
+		util.puts('Error: ' + dirPath + ' was not the project directory, file config.json was not found!\n')
 		return false
 
 getInfoFile = exports.getInfoFile = (projectDir) ->

@@ -18,6 +18,6 @@ module.exports =
 		require('./post.js')(args)
 	page: (args) ->
 		require('./page.js')(args)
-	init: (args) ->
-		require('./init')(args)
+	new: (args) ->
+		require('./new')(args)
 		#util.puts('This methods was not implemented')
