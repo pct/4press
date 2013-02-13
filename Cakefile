@@ -15,6 +15,7 @@ red = '\x1b[0;31m'
 
 task 'build', 'compile source', -> build -> log "build lib done!", green
 task 'watch', 'compile and watch', -> build true, -> log "build and watch :-)", green
+task 'test', 'unit test', -> test -> log "test done!", bold
 task 'clean', 'clean generated files', -> clean -> log "clean ./bin and ./lib done!", green
 
 log = (message, color, explanation) -> console.log color + message + reset + ' ' + (explanation or '')
@@ -54,7 +55,20 @@ build = (watch, callback) ->
   options.unshift '-w' if watch
   launch 'coffee', options, callback
 
+
+
+
 #
+# test
+#
+test = (callback) ->
+  #launch 'mocha', [], callback
+  exec 'mocha', (error, stdout, stderr) ->
+    #log error, red if error
+    log stdout, green
+    log stderr, red
+    callback()
+
 # clean
 #
 clean = (callback) ->
