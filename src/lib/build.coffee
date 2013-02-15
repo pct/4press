@@ -96,6 +96,7 @@ dataApi =
 				title: file.pathToTitle(filePath)
 				url: fileApi.srcToUrl('post', filePath)
 				time: fileApi.getCTime('post', filePath)
+				content: file.readMdToHtml(filePath)
 		return items
 
 	getPageList: () ->
