@@ -84,19 +84,18 @@ fileApi =
 
 dataApi =
   getPostList: () ->
-    postDir = fileApi.getSrcFile('post')
-    fileList = file.dir(postDir)
-    
+    posts = (JSON.parse file.read('data/info')).post
+    posts = posts.reverse()
+
     items = []
-    fileList = fileApi.sortByCreateTime('post', fileList)
-    fileList.forEach (filePath) =>
-      if not file.isMd(filePath)
+    posts.forEach (post) =>
+      if not file.isMd(post.file)
         return
       items.push
-        title: file.pathToTitle(filePath)
-        url: fileApi.srcToUrl('post', filePath)
-        time: fileApi.getCTime('post', filePath)
-        content: file.readMdToHtml(filePath)
+        title: file.pathToTitle(post.file)
+        url: fileApi.srcToUrl('post', post.file)
+        time: fileApi.getCTime('post', post.file)
+        content: file.readMdToHtml(post.file)
     return items
 
   getPageList: () ->

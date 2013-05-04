@@ -5,7 +5,7 @@
 ###Could not use on current stage
 
 ###NOTICE
-rss.xml will read from `data/info`, please make this file be always correct.
+rss, posts, and others will read from `data/info`, please make this file be always correct(especially the `file` attribute path).
 
 ###Features
 
