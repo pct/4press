@@ -250,6 +250,7 @@ rendApi =
 			entry =
 				title: postTitle
 				content: file.readMdToHtml(postPath)
+				url: fileApi.srcToUrl('post', postPath)
 				time: fileApi.getMTime('post', postPath)
 			postFile = fileApi.srcToDest('post', postPath)
 			file.write(postFile, compile(dataApi.getLocals('post', entry)))
