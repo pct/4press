@@ -153,7 +153,8 @@ dataApi =
 
     switch type
       when 'index'
-        locals.items = this.getPostList()
+        # slice 5
+        locals.items = this.getPostList().slice(0,5)
         locals.archives = this.getArchiveList()
         locals.pages = this.getPageList()
         #rewrite keyword and description
