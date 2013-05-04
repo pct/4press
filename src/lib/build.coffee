@@ -231,6 +231,7 @@ rendApi =
 				title: pageTitle
 				content: file.readMdToHtml(pagePath)
 				time: fileApi.getMTime('page', pagePath)
+				url: fileApi.srcToUrl('page', pagePath)
 			pageFile = fileApi.srcToDest('page', pagePath)
 			file.write(pageFile, compile(dataApi.getLocals('page', entry)))
 			if not keepQuiet
@@ -252,6 +253,7 @@ rendApi =
 				content: file.readMdToHtml(postPath)
 				url: fileApi.srcToUrl('post', postPath)
 				time: fileApi.getMTime('post', postPath)
+				url: fileApi.srcToUrl('post', postPath)
 			postFile = fileApi.srcToDest('post', postPath)
 			file.write(postFile, compile(dataApi.getLocals('post', entry)))
 			if not keepQuiet
